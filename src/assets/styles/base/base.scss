@@ -1,0 +1,13 @@
+.app {
+  &_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_main {
+    margin-top: 10%;
+    width: 40%;
+    background-color: white;
+  }
+}

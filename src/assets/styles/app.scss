@@ -1,0 +1,11 @@
+@import "variables";
+@import "base/base";
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: $main_app_background;
+}

@@ -1,0 +1,15 @@
+// Main Colors
+
+// --- White
+
+$white: #fff;
+
+$main_background: linear-gradient(
+  180deg,
+  rgba(244, 245, 109, 1) 0%,
+  rgba(244, 245, 109, 1) 25%,
+  rgba(242, 242, 242, 1) 25%,
+  rgba(242, 242, 242, 1) 100%
+);
+
+$main_app_background: $white;
