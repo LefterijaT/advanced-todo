@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <h1>Home Page</h1>
+  <div class="app_container">
+    <div class="app_main">
+      asdasdas
+    </div>
   </div>
 </template>
 

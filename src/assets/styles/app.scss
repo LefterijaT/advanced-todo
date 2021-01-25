@@ -1,6 +1,11 @@
 @import "variables";
+@import "base/base";
 
-body{
-  background: bisque;
+html,
+body {
+  min-height: 100%;
 }
 
+body {
+  background: $main_app_background;
+}
