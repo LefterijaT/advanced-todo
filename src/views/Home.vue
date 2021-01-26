@@ -1,7 +1,10 @@
 <template>
-  <div class="app_container">
-    <div class="app_main">
-      asdasdas
+  <div class="app__container">
+    <div class="app__main">
+      <header class="app__header">
+        <h1 class="heading--app">ToDo list</h1>
+        <button class="app__add-button"></button>
+      </header>
     </div>
   </div>
 </template>
