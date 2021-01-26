@@ -15,14 +15,24 @@
   &__header {
     padding: 16px 24px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
 
-  &__add-button {
-    width: 32px;
-    height: 32px;
-    border-radius: 18px;
-    border: 1px solid #e8e8e8;
+  &__button {
+    color: #8a8a8a;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i{
+      font-size: 24px;
+    }
+    &:focus{
+      outline: none;
+    }
   }
 }
