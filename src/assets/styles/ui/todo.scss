@@ -1,0 +1,26 @@
+.todo{
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid gray;
+    &-wrapper{
+      color: #8a8a8a;
+    }
+    &-title{
+      margin: 0 0 10px 0;
+      font-size: 24px;
+      font-weight: 400;
+      &--checked{
+          text-decoration: line-through;
+      }
+    }
+    &-date{
+      font-size: 14px;
+    }
+    &-checkbox{
+
+    }
+  }
+}
