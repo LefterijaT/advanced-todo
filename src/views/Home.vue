@@ -10,7 +10,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 const UiTodoHeader = () => import("@/components/ui/todo/Header.vue");
-const UiTodoListItem = () => import("@/components/ui/todo/ListItem.vue")
+const UiTodoListItem = () => import("@/components/ui/todo/ListItem.vue");
 @Component({
   components: {
     UiTodoHeader,
