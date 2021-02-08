@@ -2,7 +2,15 @@
   <div class="app__container">
     <div class="app__main">
       <ui-todo-header></ui-todo-header>
-      <ui-todo-list-item v-for="n in 10" :key="n"></ui-todo-list-item>
+      <ui-todo-list-item
+        v-for="(item, index) in $store.state.todo.list"
+        :key="index"
+        :index="index"
+        :item="item"
+      />
+      <pre>
+        {{ $store.state.todo.list }}
+      </pre>
     </div>
   </div>
 </template>
