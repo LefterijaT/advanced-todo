@@ -15,8 +15,11 @@
       <input
         type="checkbox"
         v-model="item.completed"
-        :id="`checkbox_${index}`"
+        :id="`checkbox_${item.id}`"
       />
+      <button class="todo__item-delete" type="button" @click="onDelete(item)">
+        <i class="material-icons">delete</i>
+      </button>
     </div>
   </div>
 </template>
@@ -24,12 +27,17 @@
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
 import { TodoItem } from "@/interface/TodoItemInterface";
+import TodoModel from "@/models/TodoModel";
 
 @Component({})
 export default class UiTodoListItem extends Vue {
   @Prop({ required: true })
-  index!: number;
-  @Prop({ required: true })
   item!: TodoItem;
+
+  todoModel: TodoModel = new TodoModel();
+
+  onDelete(item: TodoItem) {
+    this.todoModel.delete(item);
+  }
 }
 </script>

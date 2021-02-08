@@ -3,9 +3,8 @@
     <div class="app__main">
       <ui-todo-header></ui-todo-header>
       <ui-todo-list-item
-        v-for="(item, index) in $store.state.todo.list"
-        :key="index"
-        :index="index"
+        v-for="item in $store.state.todo.list"
+        :key="item.id"
         :item="item"
       />
       <pre>

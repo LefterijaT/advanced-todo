@@ -1,26 +1,41 @@
-.todo{
-  &__item{
+.todo {
+  &__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     border-top: 1px solid gray;
-    &-wrapper{
+    &-wrapper {
       color: #8a8a8a;
     }
-    &-title{
+    &-title {
       margin: 0 0 10px 0;
       font-size: 24px;
       font-weight: 400;
-      &--checked{
-          text-decoration: line-through;
+      &--checked {
+        text-decoration: line-through;
       }
     }
-    &-date{
+    &-date {
       font-size: 14px;
     }
-    &-checkbox{
-
+    &-checkbox {
+      display: flex;
+    }
+    &-delete {
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      margin: 0 0 0 10px;
+      &:hover {
+        i {
+          color: $error_state;
+        }
+      }
+      i {
+        font-size: 18px;
+      }
     }
   }
 }

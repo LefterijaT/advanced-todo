@@ -14,8 +14,11 @@ const TodoStore: Module<TodoState, RootState> = {
   },
 
   mutations: {
-    SET_NEW_ITEM(state, payload: TodoItem) {
+    CREATE(state, payload: TodoItem) {
       state.list.push(payload);
+    },
+    DELETE(state, payload: TodoItem) {
+      state.list = state.list.filter(item => item.id !== payload.id);
     }
   }
 };

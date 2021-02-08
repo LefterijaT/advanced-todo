@@ -4,7 +4,7 @@
       <i class="material-icons">sort</i>
     </button>
     <h1 class="heading--app">ToDo list</h1>
-    <button class="app__button" @click="onCreateTodo()">
+    <button class="app__button" @click="onCreate">
       <i class="material-icons">add_circle_outline</i>
     </button>
   </header>
@@ -17,7 +17,7 @@ import TodoModel from "@/models/TodoModel";
 @Component({})
 export default class UiTodoHeader extends Vue {
   todoModel: TodoModel = new TodoModel();
-  onCreateTodo() {
+  onCreate() {
     this.todoModel.create();
   }
 }

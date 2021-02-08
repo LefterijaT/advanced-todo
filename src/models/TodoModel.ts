@@ -1,4 +1,5 @@
 import store from "../store/index";
+import { TodoItem } from "@/interface/TodoItemInterface";
 
 export default class TodoModel {
   create() {
@@ -6,10 +7,14 @@ export default class TodoModel {
     if (!title) {
       return alert("Title is required");
     }
-    store.commit("todo/SET_NEW_ITEM", {
+    store.commit("todo/CREATE", {
+      id: Date.now(),
       title,
       date: new Date(),
       completed: false
     });
+  }
+  delete(item: TodoItem) {
+    store.commit("todo/DELETE", item);
   }
 }
