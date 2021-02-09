@@ -22,7 +22,7 @@
     &-checkbox {
       display: flex;
     }
-    &-delete {
+    &-delete,&-edit {
       cursor: pointer;
       border: none;
       background-color: transparent;
@@ -37,5 +37,6 @@
         font-size: 18px;
       }
     }
+
   }
 }

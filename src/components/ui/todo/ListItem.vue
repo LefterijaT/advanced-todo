@@ -17,6 +17,9 @@
         v-model="item.completed"
         :id="`checkbox_${item.id}`"
       />
+      <button class="todo__item-edit" type="button" @click="onEdit(item)">
+        <i class="material-icons">edit</i>
+      </button>
       <button class="todo__item-delete" type="button" @click="onDelete(item)">
         <i class="material-icons">delete</i>
       </button>
@@ -38,6 +41,10 @@ export default class UiTodoListItem extends Vue {
 
   onDelete(item: TodoItem) {
     this.todoModel.delete(item);
+  }
+
+  onEdit(item: TodoItem) {
+    this.todoModel.edit(item);
   }
 }
 </script>

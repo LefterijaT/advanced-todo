@@ -17,4 +17,14 @@ export default class TodoModel {
   delete(item: TodoItem) {
     store.commit("todo/DELETE", item);
   }
+  edit(item: TodoItem) {
+    const title = prompt("Task title", item.title);
+    if (!title) {
+      return alert("Title is required");
+    }
+    store.commit("todo/EDIT", {
+      item, title
+    });
+  }
+
 }
