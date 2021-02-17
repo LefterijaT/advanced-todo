@@ -8,7 +8,7 @@
         {{ item.title }}
       </h6>
       <div class="todo__item-date">
-        {{ item.date }}
+        {{ returnDate }}
       </div>
     </div>
     <div class="todo__item-checkbox">
@@ -31,6 +31,7 @@
 import { Component, Vue, Prop, Watch } from "vue-property-decorator";
 import { TodoItem } from "@/interface/TodoItemInterface";
 import TodoModel from "@/models/TodoModel";
+import moment from "moment";
 
 @Component({})
 export default class UiTodoListItem extends Vue {
@@ -50,6 +51,10 @@ export default class UiTodoListItem extends Vue {
 
   onEdit(item: TodoItem) {
     this.todoModel.edit(item);
+  }
+
+  get returnDate() {
+    return moment(this.item.date).fromNow();
   }
 }
 </script>
