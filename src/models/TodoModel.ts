@@ -23,8 +23,11 @@ export default class TodoModel {
       return alert("Title is required");
     }
     store.commit("todo/EDIT", {
-      item, title
+      item,
+      title
     });
   }
-
+  updateCheckboxState() {
+    store.commit("todo/UPDATE_CHECKBOX_STATE");
+  }
 }

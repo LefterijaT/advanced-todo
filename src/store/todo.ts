@@ -19,23 +19,26 @@ const TodoStore: Module<TodoState, RootState> = {
     },
     CREATE(state, payload: TodoItem) {
       state.list.push(payload);
-      localStorage.setItem('toDoList', JSON.stringify(state.list));
+      localStorage.setItem("toDoList", JSON.stringify(state.list));
     },
     DELETE(state, payload: TodoItem) {
       state.list = state.list.filter(item => item.id !== payload.id);
-      localStorage.setItem('toDoList', JSON.stringify(state.list));
+      localStorage.setItem("toDoList", JSON.stringify(state.list));
     },
-    EDIT(state, {item,title} : { item : TodoItem, title : string}) {
-        item.title = title;
-      localStorage.setItem('toDoList', JSON.stringify(state.list));
+    EDIT(state, { item, title }: { item: TodoItem; title: string }) {
+      item.title = title;
+      localStorage.setItem("toDoList", JSON.stringify(state.list));
+    },
+    UPDATE_CHECKBOX_STATE(state) {
+      localStorage.setItem("toDoList", JSON.stringify(state.list));
     }
   },
 
-  actions:{
-    init ({commit}){
+  actions: {
+    init({ commit }) {
       const list = localStorage.getItem("toDoList");
-      if (list){
-        commit ("INIT", JSON.parse(list))
+      if (list) {
+        commit("INIT", JSON.parse(list));
       }
     }
   }

@@ -28,12 +28,17 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from "vue-property-decorator";
+import { Component, Vue, Prop, Watch } from "vue-property-decorator";
 import { TodoItem } from "@/interface/TodoItemInterface";
 import TodoModel from "@/models/TodoModel";
 
 @Component({})
 export default class UiTodoListItem extends Vue {
+  @Watch("item.completed")
+  onCheckboxStateChange() {
+    this.todoModel.updateCheckboxState();
+  }
+
   @Prop({ required: true })
   item!: TodoItem;
 
