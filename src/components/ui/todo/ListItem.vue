@@ -12,10 +12,10 @@
       </div>
     </div>
     <div class="todo__item-checkbox">
-      <input
-        type="checkbox"
-        v-model="item.completed"
+      <v-checkbox
         :id="`checkbox_${item.id}`"
+        v-model="item.completed"
+        color="primary"
       />
       <button class="todo__item-edit" type="button" @click="onEdit(item)">
         <i class="material-icons">edit</i>

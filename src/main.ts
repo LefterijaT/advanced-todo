@@ -3,12 +3,14 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "@/assets/styles/app.scss";
+import vuetify from "./plugins/vuetify";
 
 Vue.config.productionTip = false;
 
 new Vue({
   router,
   store,
+  vuetify,
   render: h => h(App),
   async beforeCreate() {
     await store.dispatch("todo/init");
